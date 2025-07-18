@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         //features = "src/test/resources/features/deleteItem.feature", // Path to your feature files
         features = "src/test/resources/features/login.feature", // Path to your feature files
-        glue = "com.stepdefinitions", // Path to your step definitions
+        glue = {"com.stepdefinitions","com.hooks"}, // Path to your step definitions
         plugin = {"pretty", "html:target/cucumber-reports/cucumber-html-report.html", "json:target/cucumber-reports/cucumber.json"}
         //tags = "@DeleteFunctionality" // Optional: run specific tags, remove or change as needed
 )

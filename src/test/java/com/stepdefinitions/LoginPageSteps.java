@@ -75,4 +75,12 @@ public class LoginPageSteps {
         boolean isLoginPage=loginPage.iVerifyNavigatedToLogoutPage();
         Assert.assertTrue(isLoginPage,"User unable to navigate to the Login page, after logout is clicked");
     }
+
+    @Then("I should see an error {string}")
+    public void iShouldSeeAnErrorMessage(String expectedErrorMessage) {
+        //System.out.println("reached");
+        String actualErrorMessage=loginPage.getErrorMessageText(expectedErrorMessage);
+        System.out.println("error message: "+ actualErrorMessage);
+        Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage));
+    }
 }
