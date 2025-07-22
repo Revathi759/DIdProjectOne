@@ -1,7 +1,8 @@
+@Smoke
 Feature: Delete Page Items Functionalities
 
 
-  Scenario Outline: : Successfully upload a document and then delete it
+  Scenario Outline: Successfully upload a document and then delete it
     Given Enter "URL" and click I am on the login page
     When I enter <username> as username and <password> as password
     And I click the login button
